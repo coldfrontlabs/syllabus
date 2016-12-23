@@ -175,7 +175,7 @@ function syllabus_fieldset($variables) {
   _form_set_class($element, array('form-wrapper'));
   $output = '';
   //If not title do not show the title and fieldset wrapper
-  if (isset($element['#title']) && $element['#title'] != 'NULL') {
+  if (isset($element['#title']) && trim($element['#title']) != 'NULL') {
      $output = '<fieldset' . drupal_attributes($element['#attributes']) . '>';
      if (!empty($element['#title'])) {
        $output .= '<legend><span class="fieldset-legend">' . $element['#title'] . '</span></legend>';
